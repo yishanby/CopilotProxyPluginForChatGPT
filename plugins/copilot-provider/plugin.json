@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "copilot-provider",
+  "version": "0.1.0",
+  "description": "Use existing local GitHub Copilot and GHE accounts as a Codex model provider.",
+  "author": { "name": "yishanby" },
+  "repository": "https://github.com/yishanby/CopilotProxyPluginForChatGPT",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "onboardingSkill": "./skills/copilot-setup/SKILL.md",
+      "interface": {
+        "displayName": "Copilot Provider",
+        "shortDescription": "Use your existing Copilot accounts in Codex",
+        "longDescription": "Detect existing Copilot accounts, choose a Responses model, and run a private local provider automatically. Supports github.com and GHE data residency.",
+        "developerName": "yishanby",
+        "category": "Developer tools",
+        "capabilities": ["Read", "Write"]
+      }
+    }
+  }
+}
